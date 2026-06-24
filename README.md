@@ -200,12 +200,13 @@ psql -U postgres -d bengkel_db -f Bengkel_db.sql
 
 Project ini dikembangkan oleh Kelompok Mata Kuliah Basis Data I.
 
-| Nama           | Peran              |
-| -------------- | ------------------ |
-| Ketua Kelompok | Database Designer  |
-| Anggota 1      | Frontend Developer |
-| Anggota 2      | Backend Developer  |
-| Anggota 3      | Database Engineer  |
+| Nama           | Peran               |
+| -------------- | ------------------  |
+| Anggota 1      | Analisis Kebutuhan  |
+| Anggota 2      |      ERC/CDM        |
+| Anggota 3      | Database PostgreSQL |
+| Anggota 4      |  UI dan Prsentasi   |
+| Anggota 5      | Pengujian Sisteem   |
 
 ---
 
