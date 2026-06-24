@@ -1,137 +1,172 @@
-# 🚗 AutoShop Pro - Sistem Manajemen Bengkel Kendaraan
+# 🔧 Bengkel Arek Males - Sistem Informasi Manajemen Bengkel
 
-## 📌 Deskripsi
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-blue)
+![License](https://img.shields.io/badge/License-Educational-green)
 
-AutoShop Pro adalah aplikasi manajemen bengkel kendaraan berbasis **React, TypeScript, dan Tailwind CSS** yang dirancang untuk membantu operasional bengkel secara digital. Sistem ini menyediakan fitur pengelolaan pelanggan, kendaraan, montir, layanan servis, produk, transaksi, pembayaran, hingga laporan analitik.
+## 📖 Deskripsi
 
-Aplikasi menggunakan data dummy (seed data) untuk simulasi operasional bengkel dan dapat dikembangkan lebih lanjut dengan integrasi database dan backend API.
+**Bengkel Arek Males** merupakan aplikasi Sistem Informasi Manajemen Bengkel Kendaraan yang dikembangkan untuk membantu proses operasional bengkel secara digital, mulai dari pengelolaan pelanggan, kendaraan, montir, transaksi servis, sparepart, hingga pembuatan laporan.
+
+Proyek ini dibuat sebagai implementasi Mata Kuliah **Basis Data I** dengan menerapkan konsep:
+
+* Entity Relationship Diagram (ERD)
+* Conceptual Data Model (CDM)
+* Relasi Database (1:1, 1:M, M:N)
+* Supertype dan Subtype
+* Weak Entity dan Identifying Relationship
+* ARC (Exclusive Relationship)
+* Transferable dan Non-Transferable Relationship
+* Implementasi Database menggunakan PostgreSQL
 
 ---
 
-## ✨ Fitur Utama
+# ✨ Fitur Utama
 
-### 📊 Dashboard
+## 📊 Dashboard
 
-* Statistik pelanggan, kendaraan, dan transaksi
-* Grafik pendapatan bulanan
-* Grafik layanan terpopuler
+* Statistik pelanggan dan kendaraan
+* Statistik transaksi servis
+* Grafik pendapatan
 * Monitoring status transaksi
 * Daftar transaksi terbaru
 
-### 👥 Manajemen Pelanggan
+## 👤 Manajemen Pelanggan
 
 * Tambah pelanggan
-* Edit data pelanggan
+* Edit pelanggan
 * Hapus pelanggan
 * Pencarian pelanggan
 
-### 🚙 Manajemen Kendaraan
+## 🚗 Manajemen Kendaraan
 
-* Tambah kendaraan
-* Edit kendaraan
-* Hapus kendaraan
+* Data kendaraan pelanggan
 * Relasi kendaraan dengan pelanggan
+* Riwayat servis kendaraan
 
-### 🔧 Manajemen Montir
+## 👨‍🔧 Manajemen Montir
 
 * Data montir
 * Keahlian montir
-* Status kerja (Aktif/Cuti)
+* Status kerja montir
 * Sistem supervisor
 
-### 🛠️ Manajemen Layanan Servis
+## 🛠️ Manajemen Layanan Servis
 
 * Data layanan servis
 * Harga layanan
 * Durasi pengerjaan
-* Deskripsi layanan
-
-### 📦 Manajemen Produk
-
-* Sparepart
-* Aksesoris kendaraan
-* Monitoring stok
-* Informasi masa pakai produk
-
-### 📋 Transaksi Servis
-
-* Pencatatan servis kendaraan
-* Status pengerjaan
-* Detail layanan yang digunakan
 * Catatan servis
 
-### 💳 Pembayaran
+## 📦 Manajemen Sparepart
+
+* Data sparepart
+* Monitoring stok
+* Harga produk
+* Informasi produk
+
+## 💳 Pembayaran
 
 * Pembayaran tunai
 * Pembayaran transfer
-* Perhitungan kembalian
 * Riwayat pembayaran
+* Perhitungan total transaksi
 
-### 📈 Laporan dan Analitik
+## 📈 Laporan dan Analitik
 
-* Grafik pendapatan
+* Laporan pendapatan
 * Statistik layanan
-* Analisis transaksi
 * Monitoring performa bengkel
+* Analisis transaksi
 
 ---
 
-## 🏗️ Teknologi yang Digunakan
+# 🗄️ Struktur Database
+
+## Entitas Utama
+
+* Pelanggan
+* Kendaraan
+* Pegawai
+* Mekanik
+* Kasir
+* Admin
+* Servis
+* Detail Servis
+* Sparepart
+* Supplier
+* Pembayaran
+
+## Relasi Database
+
+* Pelanggan → Kendaraan (1:M)
+* Kendaraan → Servis (1:M)
+* Servis → Sparepart (M:N)
+* Servis → Mekanik (M:N)
+* Pelanggan → Akun (1:1)
+
+---
+
+# 🏗️ Teknologi yang Digunakan
 
 ### Frontend
 
 * React
 * TypeScript
 * Tailwind CSS
+* Vite
 
-### UI & Icons
+### Database
 
-* Lucide React
+* PostgreSQL
 
 ### Visualisasi Data
 
 * Recharts
 
-### Build Tool
+### Version Control
 
-* Vite
-
----
-
-## 📂 Struktur Proyek
-
-```text
-src/
-│
-├── app/
-│   └── App.tsx
-│
-├── styles/
-│   └── index.css
-│
-├── main.tsx
-│
-└── components/
-```
+* Git & GitHub
 
 ---
 
-## 🚀 Instalasi
-
-### Clone Repository
+# 📁 Struktur Project
 
 ```bash
-git clone https://github.com/username/autoshop-pro.git
-cd autoshop-pro
+Bengkel_Arek_Males
+│
+├── src
+│   ├── app
+│   ├── components
+│   ├── pages
+│   ├── styles
+│   └── data
+│
+├── Bengkel_db.sql
+├── package.json
+├── vite.config.ts
+└── README.md
 ```
 
-### Install Dependency
+---
+
+# ⚙️ Instalasi
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ndiss18/Bengkel_Arek_Males.git
+cd Bengkel_Arek_Males
+```
+
+## Install Dependency
 
 ```bash
 npm install
 ```
 
-### Jalankan Project
+## Menjalankan Project
 
 ```bash
 npm run dev
@@ -139,57 +174,54 @@ npm run dev
 
 Aplikasi akan berjalan pada:
 
-```text
+```bash
 http://localhost:5173
 ```
 
 ---
 
-## 🔑 Login Demo
+# 🗄️ Menjalankan Database PostgreSQL
 
-Gunakan akun berikut untuk masuk:
+Buat database:
 
-```text
-Username : admin
-Password : admin123
+```sql
+CREATE DATABASE bengkel_db;
+```
+
+Import file:
+
+```bash
+psql -U postgres -d bengkel_db -f Bengkel_db.sql
 ```
 
 ---
 
-## 📊 Modul Sistem
+# 👥 Tim Pengembang
 
-| Modul      | Deskripsi                 |
-| ---------- | ------------------------- |
-| Dashboard  | Ringkasan data dan grafik |
-| Pelanggan  | Data pelanggan bengkel    |
-| Kendaraan  | Data kendaraan pelanggan  |
-| Montir     | Pengelolaan montir        |
-| Layanan    | Data servis kendaraan     |
-| Produk     | Sparepart dan aksesoris   |
-| Transaksi  | Proses servis kendaraan   |
-| Pembayaran | Data pembayaran           |
-| Riwayat    | Riwayat servis            |
-| Laporan    | Analitik dan laporan      |
+Project ini dikembangkan oleh Kelompok Mata Kuliah Basis Data I.
+
+| Nama           | Peran              |
+| -------------- | ------------------ |
+| Ketua Kelompok | Database Designer  |
+| Anggota 1      | Frontend Developer |
+| Anggota 2      | Backend Developer  |
+| Anggota 3      | Database Engineer  |
 
 ---
 
-## 🎯 Tujuan Pengembangan
+# 🎯 Tujuan Pengembangan
 
 * Digitalisasi operasional bengkel.
-* Mempermudah pencatatan servis.
-* Mengelola data pelanggan dan kendaraan.
+* Mempermudah pengelolaan data pelanggan.
+* Mengelola transaksi servis secara terstruktur.
 * Memantau stok sparepart.
 * Menyediakan laporan yang akurat.
-* Meningkatkan efisiensi pelayanan bengkel.
+* Mengimplementasikan konsep basis data dalam studi kasus nyata.
 
 ---
 
-## 👨‍💻 Pengembang
+# 📄 Lisensi
 
-Project dibuat sebagai implementasi Sistem Informasi Bengkel Kendaraan menggunakan React dan TypeScript.
+Project ini dibuat untuk keperluan pembelajaran dan tugas Mata Kuliah Basis Data I.
 
----
-
-## 📄 Lisensi
-
-Proyek ini digunakan untuk keperluan pembelajaran, tugas kuliah, dan pengembangan sistem informasi bengkel.
+© 2026 - Bengkel Arek Males Team
